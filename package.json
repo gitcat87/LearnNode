@@ -1,0 +1,20 @@
+{
+  "name": "nodework_clone",
+  "version": "1.0.0",
+  "description": "learn-sequelizer-chapter 7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitcat87/LearnNode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitcat87/LearnNode/issues"
+  },
+  "homepage": "https://github.com/gitcat87/LearnNode#readme"
+}
