@@ -1,6 +1,8 @@
-document.getElementById('user-form').addEventListener('submit', (e) => {
+document.getElementById('user-form').addEventListener('submit', async(e) => {
     e.preventDefault();
     alert('출력');
+    
 
-    axios.post('/users/save', { data: "data" });
+    const result = await axios.post('/users/save', { data: "data" });
+    console.log(result);
 })
