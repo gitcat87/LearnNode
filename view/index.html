@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{ padding: 0; margin: 0;}
+        input{
+            font-size: 1.1rem;
+            height: 1.4rem;
+            padding: .2rem;
+            margin: .2rem;
+        }
+        input[type='text']{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>회원과 댓글관리</h1>
+    <h2>{{a}}</h2>
+    <div>
+        <form id="user-form">
+            <fieldset>
+                <legend>사용자 등록</legend>
+                <div>
+                    <label>사용자명</label><input type="text" id="username" placeholder="사용자명"/>
+                </div>
+                <div>
+                    <label>나이</label><input type="text" id="age" placeholder="나이"/>
+                </div>
+                <div>
+                    <label>결혼유무</label>
+                    <input type="checkbox" id="married"/>
+                </div>
+                <button type="submit">등록</button>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form id="comment-form">
+            <fieldset>
+                <legend>댓글 등록</legend>
+                <div>
+                    <label>사용자아이디</label><input type="text" id="userid" placeholder="사용자아이디"/>
+                </div>
+                <div>
+                    <label>댓글내용</label>
+                    <input type="text" id="comment" placeholder="댓글내용"/>
+                </div>
+                <button type="submit">등록</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/index.js"></script>
