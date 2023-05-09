@@ -25,7 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-// app.use('/comments', commentsRouter);
+app.use('/comments', commentsRouter);
+
+const {User,Comment} = require('./model/db')
 
 app.listen(app.get("port"), () => {
   console.log(app.get("port"), "번 서버 시작");

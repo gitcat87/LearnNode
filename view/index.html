@@ -19,7 +19,7 @@
         }
         input[type='text']{
             width: 100%;
-        }
+        }        
     </style>
 </head>
 <body>
@@ -37,11 +37,32 @@
                 </div>
                 <div>
                     <label>결혼유무</label>
-                    <input type="checkbox" id="married"/>
+                    <input type="checkbox" id="married" checked/>
                 </div>
                 <button type="submit">등록</button>
             </fieldset>
         </form>
+        <h2 id="info"></h2>
+        <table style="border: 1px solid black; width:100%; text-align: center;" >
+            <thead>
+            <tr>
+                <th>UserID</th>
+                <th>UserName</th>
+                <th>Age</th>
+                <th>Married</th>
+            </tr>
+            </thead>
+        <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.married}}</td>
+        </tr>       
+        {% endfor %}
+        </tbody>
+        </table>
     </div>
     <div>
         <form id="comment-form">
@@ -60,5 +81,6 @@
     </div>
 </body>
 </html>
+<!-- 비동기 통신을 하기 위한 라이브러리-->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="/index.js"></script>
+<script src="/myaxios.js"></script>
